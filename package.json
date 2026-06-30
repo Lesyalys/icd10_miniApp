@@ -7,10 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "vk-miniapps-deploy"
   },
+  "homepage": ".",
   "dependencies": {
     "@vkontakte/vk-bridge": "^3.0.2",
+    "@vkontakte/vk-miniapps-deploy": "^1.0.2",
     "@vkontakte/vkui": "^8.3.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
