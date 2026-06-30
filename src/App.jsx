@@ -1,4 +1,8 @@
 import React, { useState, useMemo } from 'react';
+import bridge from '@vkontakte/vk-bridge';
+
+// Отправляет событие инициализации нативному клиенту
+bridge.send("VKWebAppInit");
 import {
   AppRoot,
   SplitLayout,
@@ -24,6 +28,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 import { Icon20Cancel, Icon24ChevronRight, Icon24FolderOutline, Icon24DocumentOutline } from '@vkontakte/icons';
 
 import icd10Data from './icd10.json';
+
 
 const App = () => {
   const platform = usePlatform();
